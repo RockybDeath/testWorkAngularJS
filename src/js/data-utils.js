@@ -1,7 +1,10 @@
-function makeDataId() {
-  return `${Date.now()}:${Math.random().toString().substr(2)}`;
+function makeDataId(){
+  return uniqueKey++;
 }
-function makeDefaulData() {
+
+let uniqueKey = 1;
+
+function makeDefaultData() {
   return [
     {
       id: makeDataId(),
@@ -34,4 +37,18 @@ function makeDefaulData() {
       date: "2020-04-21T09:11:00.000Z",
     }
   ];
+}
+
+function findUniqueTags(array){
+
+  let resultArray = [];
+
+  array.forEach(obj => obj.tags.forEach(tag => resultArray.push(tag)));
+
+  resultArray = resultArray.filter((element, index) => {
+    return resultArray.indexOf(element) === index;
+  })
+
+  return resultArray.join(', ')
+
 }

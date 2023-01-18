@@ -1,1 +1,16 @@
-Sidebar
+<label>Title: {{storage.chosenRow.title}}</label>
+<div class="tags-block">
+    <label>Tags:</label>
+    <ul>
+        <li class="tag-row" ng-repeat="(index, tag) in storage.chosenRow.tags">
+            {{tag}}
+            <div class="button-block" ng-click="removeTag(index)">
+                <div class="cross"></div>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="tags-view-actions">
+    <label>New Title: <input type="text" ng-model="model.tagsForNewRow"></label>
+    <button ng-click="addTag(model.tagsForNewRow)">Set</button>
+</div>

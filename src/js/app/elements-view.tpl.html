@@ -4,6 +4,29 @@
     <button type="submit">Set</button>
   </form>
 </div>
-<div>
-  Elements
+<div class="elements-main-block">
+    <div class="buttons-block">
+        <div class="buttons-block__button">
+            Button
+        </div>
+    </div>
+    <div class="list-block">
+      <ul class="list-block__array">
+        <li class="list-block__array-row" ng-repeat="row in model.listArray" ng-mouseover="row.mouseEnter = true" ng-mouseleave="row.mouseEnter = false">
+            <div class="block-row-info">
+                {{row.name}}
+            </div>
+            <div class="block-row-boxes">
+                <div class="block-row-boxes__flex">
+                <div class="row-box">
+
+                </div>
+                <div class="row-box">
+
+                </div>
+                </div>
+            </div>
+        </li>
+      </ul>
+    </div>
 </div>

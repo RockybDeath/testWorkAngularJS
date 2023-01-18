@@ -1,2 +1,29 @@
 <some-1></some-1>
-Content
+<div class="filter-block">
+    <div class="order-block">
+        <label>Order:
+            <select ng-change="changeOrderBy()" ng-model="model.orderDefault">
+                <option ng-repeat="row in model.orderOptions" value="{{row}}">{{row}}</option>
+            </select>
+        </label>
+    </div>
+    <div class="checkbox-block">
+        <label>Only date: <input type="checkbox" ng-model="model.showOnlyDate"></label>
+    </div>
+    <div class="search-block">
+        <label>Search: <input type="text" ng-model="model.searchTitle"></label>
+    </div>
+</div>
+<div class="elements-block">
+    <ul class="list-block">
+        <li class="list-block__row" ng-repeat="row in model.arrayElements | filter:{'title': model.searchTitle}"
+            ng-click="chooseRow(row)" ng-class="{'dark-background': row.chosenRow}">
+            <p>Title: {{row.title}}</p>
+            <p>Date: {{getRightDateFormat(row.date)}}</p>
+        </li>
+    </ul>
+</div>
+<div class="elements-view-actions">
+    <label>New Title: <input type="text" ng-model="model.titleForNewRow"></label>
+    <button ng-click="addToArray(model.titleForNewRow)">Set</button>
+</div>

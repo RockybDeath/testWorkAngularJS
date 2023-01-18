@@ -4,7 +4,84 @@ elements-view {
   display: block;
 }
 
+.buttons-block{
+  height: 88px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons-block__button{
+  height: 40px;
+  width: calc(100% - 48px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid @c-dark;
+  border-radius: 5px;
+  background: @c-white;
+  cursor: pointer;
+}
+
+.buttons-block__button:hover{
+  border-color: @c-gray;
+  background: @c-gray-light;
+}
+
 .elements-view__ctrls {
   padding: 10px;
   border-bottom: 1px solid @c-gray;
+}
+
+.elements-main-block{
+  height: @main-block-elements-height;
+}
+
+li.list-block__array-row:first-child{
+  border-top: 1px solid @c-gray;
+}
+
+li.list-block__array-row{
+  height: 32px;
+  border-bottom: 1px solid @c-gray;
+  list-style-type: none;
+  padding: 5px 0;
+  display: flex;
+  cursor: pointer;
+}
+
+li.list-block__array-row:hover{
+  background: @c-gray-light;
+}
+
+.row-box{
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+  margin-left: 6px;
+  background: @c-gray;
+}
+
+.block-row-boxes{
+  float: right;
+  margin-right: 18px;
+  margin-left: 6px;
+  display: inline-block;
+}
+
+.block-row-boxes__flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.block-row-info{
+  float: left;
+  padding-left: 24px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  height: 100%;
+  width: 100%;
 }

@@ -4,3 +4,35 @@ content-view {
   display: block;
   border-left: 1px solid @c-gray;
 }
+
+li.list-block__row:first-child{
+  border-top: 1px solid @c-gray;
+}
+
+li.list-block__row{
+  border-bottom: 1px solid #AAAAAA;
+  list-style-type: none;
+  align-items: center;
+  cursor: pointer;
+}
+
+li.list-block__row:hover{
+  background: @c-gray-light;
+}
+
+.elements-block{
+  margin-top: 10px;
+}
+
+li.dark-background{
+  background: #757272 !important;
+}
+
+p{
+  margin: 0;
+}
+
+.filter-block{
+  padding-top: 10px;
+  border-top: 1px solid @c-gray;
+}

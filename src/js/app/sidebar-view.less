@@ -8,3 +8,56 @@ sidebar-view {
   border-left: @border-size solid @c-gray;
   box-sizing: border-box;
 }
+
+.tags-block{
+  margin-top: 20px;
+}
+
+li.tag-row:first-child{
+  border-top: 1px solid @c-gray;
+}
+
+li.tag-row{
+  border-bottom: 1px solid @c-gray;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  word-break: break-all;
+}
+ul{
+  margin-top: 0;
+}
+
+div.button-block{
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  background: @c-gray-light;
+  border: 1px solid @c-gray;
+  margin-left: 10px;
+  justify-content: center;
+}
+
+div.cross {
+  cursor: pointer;
+  position: absolute;
+  right: 14px;
+}
+
+div.cross:before, div.cross:after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 2px;
+  background: @c-dark;
+}
+
+div.cross:before {
+  transform: rotate(45deg);
+}
+
+div.cross:after {
+  transform: rotate(-45deg);
+}
